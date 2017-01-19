@@ -19,6 +19,7 @@ RUN apk --no-cache add wget ca-certificates squid=${SQUID_VERSION} \
     && apk --no-cache add g++ autoconf automake make libtool openssl-dev libxml2-dev libev-dev libevent-dev zlib-dev jemalloc-dev jansson-dev c-ares-dev \
     && ./configure --disable-python-bindings \
     && make && make install-strip \
+    && mkdir -p /var/log/nghttpx/ \
     && apk del g++ autoconf automake make libtool openssl-dev libxml2-dev libev-dev libevent-dev zlib-dev jemalloc-dev jansson-dev c-ares-dev \
     && cd .. && rm -rf nghttp2-${NGHTTP2_VERSION}
 

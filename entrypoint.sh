@@ -2,7 +2,6 @@
 set -e
 
 # TODO
-mkdir -p /var/log/nghttpx
 nohup nghttpx >/var/log/nghttpx/nghttpx.log &
 
 create_log_dir() {
