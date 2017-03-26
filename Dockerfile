@@ -7,7 +7,7 @@ ENV SQUID_VERSION=3.5.23-r0 \
     SQUID_LOG_DIR=/var/log/squid \
     SQUID_USER=squid
 
-ENV NGHTTP2_VERSION=1.18.1
+ENV NGHTTP2_VERSION=1.20.0
 
 RUN apk --no-cache add wget ca-certificates squid=${SQUID_VERSION} \
     && mv /etc/squid/squid.conf /etc/squid/squid.conf.dist \
